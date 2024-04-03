@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sample_1/employee_list.dart';
 import 'package:sample_1/homepage.dart';
 
@@ -77,7 +75,7 @@ class _VehicleListPageState extends State<VehicleListPage> {
                     )
                   ],
                 ),
-                SizedBox(height: 70,),
+                const SizedBox(height: 70,),
                 Align(
                   alignment: Alignment.center,
                   child: SizedBox(

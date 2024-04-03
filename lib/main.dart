@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'vehicle_details.dart';
 import 'vehicle_list_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: false),
       debugShowCheckedModeBanner: false,
       // home: const HomePage(),
-      home: const VehicleListPage(),
+      home: const VehicleDetailsPage(),
     );
   }
 }
