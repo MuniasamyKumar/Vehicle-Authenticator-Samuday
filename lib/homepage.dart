@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sample_1/invoice_page.dart';
 import 'package:sample_1/profile_view_page.dart';
 import 'package:sample_1/trip_list_page.dart';
+import 'package:sample_1/vehicle_list_page.dart';
 import 'Widgets/car_container.dart';
 import 'employee_list.dart';
 
@@ -561,7 +561,7 @@ class MyDrawer extends StatelessWidget {
                   ),
                   ListTile(
                     onTap: () {
-                      Navigator.pop(context);
+                      Get.to(const VehicleListPage());
                     },
                     leading: const Icon(Icons.car_rental, color: Colors.white),
                     title: const Text(
