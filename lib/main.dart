@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sample_1/homepage.dart';
 
-import 'vehicle_details.dart';
-import 'vehicle_list_page.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -17,8 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(useMaterial3: false),
       debugShowCheckedModeBanner: false,
-       home: const HomePage(),
-     // home: const VehicleDetailsPage(),
+      home: const HomePage(),
     );
   }
 }
