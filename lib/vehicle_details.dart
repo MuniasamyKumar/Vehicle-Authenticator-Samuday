@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:sample_1/edit_vehicle_page.dart';
 import 'package:sample_1/employee_list.dart';
 import 'package:sample_1/homepage.dart';
-import 'package:sample_1/trip_list_page.dart';
+import 'package:sample_1/vehicle_list_page.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -51,7 +52,9 @@ class _VehicleDetailsPageState extends State<VehicleDetailsPage>
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(const VehicleListPage());
+                      },
                       icon: const Icon(
                         Icons.arrow_back,
                         size: 24,
@@ -148,7 +151,9 @@ class _VehicleDetailsPageState extends State<VehicleDetailsPage>
                                       width: 45,
                                       child: Center(
                                           child: IconButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Get.to(const EditVehiclePage());
+                                              },
                                               icon: const Icon(
                                                 Icons.edit,
                                                 color: Colors.white,
@@ -384,7 +389,7 @@ class _VehicleDetailsPageState extends State<VehicleDetailsPage>
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(top: 20),
-                            child: Container(
+                            child: SizedBox(
                               height: 120,
                               child: Card(
                                 shape: RoundedRectangleBorder(
