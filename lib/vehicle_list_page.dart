@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sample_1/create_vehicle_page.dart';
 import 'package:sample_1/employee_list.dart';
 import 'package:sample_1/homepage.dart';
+import 'package:sample_1/vehicle_details.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -58,7 +61,9 @@ class _VehicleListPageState extends State<VehicleListPage> {
                       width: 30,
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(const CreateVehiclePage());
+                      },
                       style: ElevatedButton.styleFrom(
                           minimumSize: const Size(35, 35),
                           backgroundColor: const Color.fromRGBO(
@@ -168,7 +173,9 @@ class CarCustomContainer extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(const VehicleDetailsPage());
+                          },
                           style: ElevatedButton.styleFrom(
                               minimumSize: const Size(100, 37),
                               shape: RoundedRectangleBorder(
