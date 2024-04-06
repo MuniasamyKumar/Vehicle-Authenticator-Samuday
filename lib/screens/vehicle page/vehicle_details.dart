@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:sample_1/edit_vehicle_page.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
-import 'package:sample_1/vehicle_list_page.dart';
+import 'package:sample_1/screens/vehicle%20page/edit_vehicle_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
+import 'package:sample_1/screens/vehicle%20page/vehicle_list_page.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -677,6 +677,7 @@ class CustomTripHistroyContainer extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
+                      elevation: const MaterialStatePropertyAll(0),
                       backgroundColor: const MaterialStatePropertyAll(
                           Color.fromARGB(255, 253, 194, 189)),
                       minimumSize: const MaterialStatePropertyAll(

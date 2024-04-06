@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/invoice_page.dart';
-import 'package:sample_1/profile_view_page.dart';
-import 'package:sample_1/trip_list_page.dart';
-import 'package:sample_1/vehicle_list_page.dart';
-import 'Widgets/car_container.dart';
-import 'employee_list.dart';
+import 'package:sample_1/screens/invoice%20page/invoice_page.dart';
+import 'package:sample_1/screens/profile%20page/profile_view_page.dart';
+import 'package:sample_1/screens/trips%20page/trip_list_page.dart';
+import 'package:sample_1/screens/vehicle%20page/vehicle_list_page.dart';
+import '../../Widgets/car_container.dart';
+import '../employee list page/employee_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -229,241 +229,292 @@ class DetailsContainer extends StatelessWidget {
         top: 10,
       ),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        elevation: 3,
-        shadowColor: Colors.orange[100],
-        child: Container(
-          height: 80,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: Colors.grey,
-                width: 0.5,
-              )),
-          child: Padding(
-            padding: const EdgeInsets.only(
-              left: 10,
-              right: 10,
-            ),
-            child: Row(
-              //  crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                              image: AssetImage("assets/car01.png"),
-                              fit: BoxFit.cover)),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 15),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "TN96 BS3545",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "19-10-2023    10:11 AM",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 12,
-                                color: Colors.grey),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "From : ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                          Text(
-                            "Office",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 12,
-                                color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "To : ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                          Text(
-                            "Vilvamarathupatti",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 12,
-                                color: Colors.grey),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "User : ",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 14),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            height: 32,
-                            width: 32,
-                            decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage("assets/Ellipse 2.png"),
-                                  fit: BoxFit.cover,
-                                )),
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            "Guru prasad",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Driver : ",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400, fontSize: 14),
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Row(
-                        children: [
-                          Container(
-                            height: 32,
-                            width: 32,
-                            decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage("assets/Ellipse 3.png"),
-                                  fit: BoxFit.cover,
-                                )),
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          const Text(
-                            "saran Kumar c",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "Total Km  : ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                          Text(
-                            "-",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 12,
-                                color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "No.of Traveller : ",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 14),
-                          ),
-                          Text(
-                            "3",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300,
-                                fontSize: 12,
-                                color: Colors.grey),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.keyboard_arrow_down_sharp,
-                        size: 28,
-                      )),
-                )
-              ],
+        elevation: 5,
+        child: ExpansionTile(
+          trailing: const Padding(
+            padding: EdgeInsets.only(left: 40, right: 5, top: 10, bottom: 10),
+            child: Icon(
+              Icons.expand_more,
+              size: 30,
             ),
           ),
+          shape: const RoundedRectangleBorder(side: BorderSide.none),
+          iconColor: Colors.black,
+          textColor: Colors.black,
+          title: Padding(
+            padding: const EdgeInsets.only(bottom: 5, left: 5),
+            child: Align(
+              alignment: Alignment.center,
+              child: Row(
+                //  crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: const DecorationImage(
+                                image: AssetImage("assets/car01.png"),
+                                fit: BoxFit.cover)),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "TN96 BS3545",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "19-10-2023    10:11 AM",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "From : ",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                            Text(
+                              "Office",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "To : ",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                            Text(
+                              "Vilvamarathupatti",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "User : ",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 32,
+                              width: 32,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/Ellipse 2.png"),
+                                    fit: BoxFit.cover,
+                                  )),
+                            ),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            const Text(
+                              "Guru prasad",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          "Driver : ",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400, fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 32,
+                              width: 32,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/Ellipse 3.png"),
+                                    fit: BoxFit.cover,
+                                  )),
+                            ),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            const Text(
+                              "saran Kumar c",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Total Km  : ",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                            Text(
+                              "-",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "No.of Traveller : ",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400, fontSize: 14),
+                            ),
+                            Text(
+                              "3",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 12,
+                                  color: Colors.grey),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          children: [
+            const Divider(
+              color: Colors.grey,
+              thickness: 0.5,
+              endIndent: 30,
+              indent: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 45, top: 10, bottom: 20, right: 45),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Starting Km:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Starting Time:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Ending Km:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Ending Time:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Row(
+                    children: [
+                      Text(
+                        "Purpose:  ",
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      ),
+                      Text(
+                        "Ut enim ad minim veniam",
+                        style: TextStyle(fontSize: 15, color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          elevation: const MaterialStatePropertyAll(0),
+                          backgroundColor:
+                              const MaterialStatePropertyAll(Color(0xFFFDF3E6)),
+                          minimumSize: const MaterialStatePropertyAll(
+                            Size(100, 35),
+                          ),
+                          shape: MaterialStatePropertyAll(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                  side: BorderSide.none))),
+                      child: const Text("Assigned",
+                          style: TextStyle(color: Color(0xFFE68A00)))),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
@@ -629,18 +680,14 @@ class LogOutContainer extends StatelessWidget {
         color: Colors.white,
       ),
       child: Column(
-        mainAxisAlignment:
-            MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           const Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Log Out ?",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 22),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),
               SizedBox(height: 20),
               Text(
@@ -655,48 +702,35 @@ class LogOutContainer extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                        fixedSize:
-                            const Size(120, 40),
+                        fixedSize: const Size(120, 40),
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(
-                                    10),
-                            side: const BorderSide(
-                                color: Colors.grey))),
+                            borderRadius: BorderRadius.circular(10),
+                            side: const BorderSide(color: Colors.grey))),
                     child: const Text(
                       "Cancel",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.grey),
+                      style: TextStyle(fontSize: 18, color: Colors.grey),
                     )),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                        fixedSize:
-                            const Size(120, 40),
-                        backgroundColor:
-                            const Color(0xFF0061E4),
+                        fixedSize: const Size(120, 40),
+                        backgroundColor: const Color(0xFF0061E4),
                         shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(
-                                  10),
+                          borderRadius: BorderRadius.circular(10),
                         )),
                     child: const Text(
                       "Log out",
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white),
+                      style: TextStyle(fontSize: 18, color: Colors.white),
                     )),
               ],
             ),

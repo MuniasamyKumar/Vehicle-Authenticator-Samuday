@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
 import 'package:dotted_border/dotted_border.dart';
-import 'package:sample_1/invoice_page.dart';
+import 'package:sample_1/screens/invoice%20page/invoice_page.dart';
 
-import 'Widgets/invoice_table.dart';
+import '../../Widgets/invoice_table.dart';
 
 class EditInvoicePage extends StatefulWidget {
   const EditInvoicePage({super.key});
@@ -28,24 +28,26 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             children: [
-               Padding(
+              Padding(
                 padding: const EdgeInsets.only(top: 30),
                 child: Row(
                   children: [
                     IconButton(
-                      icon: const Icon(Icons.arrow_back,
-                      size: 25,),
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        size: 25,
+                      ),
                       onPressed: () {
                         Get.to(const InvoicePage());
                       },
-                      
                     ),
                     const SizedBox(
                       width: 5,
                     ),
                     const Text(
                       "Edit Invoice",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
                     ),
                   ],
                 ),
@@ -70,7 +72,7 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                 child: InvoiceTable(),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 150,bottom: 30),
+                padding: const EdgeInsets.only(right: 150, bottom: 30),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Container(
@@ -113,7 +115,8 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                                   const Text(
                                     "Discount",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.normal, fontSize: 14),
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 14),
                                   ),
                                   const SizedBox(height: 30),
                                   DottedBorder(
@@ -121,7 +124,6 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                                     color: Colors.grey,
                                     borderType: BorderType.RRect,
                                     child: const ClipRRect(
-                                      
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(10)),
                                       child: SizedBox(
@@ -153,10 +155,14 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                                                 contentPadding:
                                                     EdgeInsets.only(left: 10),
                                                 border: OutlineInputBorder(
-                                                  borderRadius: BorderRadius.only(
-                                                      topLeft: Radius.circular(10),
-                                                      bottomLeft:
-                                                          Radius.circular(10)),
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  10),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  10)),
                                                 )),
                                           )),
                                       SizedBox(
@@ -176,26 +182,37 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                                           height: 30,
                                           width: 100,
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             // color: Colors.white,
                                           ),
                                           child: TextField(
                                             decoration: InputDecoration(
                                                 enabledBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                      borderSide: const BorderSide(width: 1,color: Color(0xFF495057))
-                                                ),
-                                                focusedBorder: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                      borderSide: const BorderSide(width: 1,)
-                                                ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                    borderSide:
+                                                        const BorderSide(
+                                                            width: 1,
+                                                            color: Color(
+                                                                0xFF495057))),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10),
+                                                        borderSide:
+                                                            const BorderSide(
+                                                          width: 1,
+                                                        )),
                                                 border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                      borderSide: const BorderSide(width: 1)
-                                                )),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                    borderSide:
+                                                        const BorderSide(
+                                                            width: 1))),
                                           )),
                                       const SizedBox(
                                         width: 5,
@@ -216,7 +233,7 @@ class _EditInvoicePageState extends State<EditInvoicePage> {
                                     "0.00",
                                     style: TextStyle(fontSize: 14),
                                   ),
-                                   SizedBox(height: 30),
+                                  SizedBox(height: 30),
                                   Text(
                                     "0.00",
                                     style: TextStyle(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/create_dri_page.dart';
-import 'package:sample_1/create_em_page.dart';
-import 'homepage.dart';
+import 'package:sample_1/screens/employee%20list%20page/create_dri_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/create_em_page.dart';
+import '../dashboard page/homepage.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -40,7 +40,7 @@ class _EmployeeListState extends State<EmployeeList>
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: MyAppbar(scaffoldKey:_scaffoldKey),
+      appBar: MyAppbar(scaffoldKey: _scaffoldKey),
       drawer: const MyDrawer(),
       body: SafeArea(
         child: Padding(
@@ -86,7 +86,12 @@ class _EmployeeListState extends State<EmployeeList>
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(const Color.fromRGBO(0, 97, 228, 1,)),
+                                MaterialStateProperty.all(const Color.fromRGBO(
+                              0,
+                              97,
+                              228,
+                              1,
+                            )),
                             minimumSize:
                                 MaterialStateProperty.all(const Size(140, 45)),
                             shape: MaterialStateProperty.all(
@@ -106,7 +111,12 @@ class _EmployeeListState extends State<EmployeeList>
                           },
                           style: ButtonStyle(
                             backgroundColor:
-                                MaterialStateProperty.all(const Color.fromRGBO(0, 97, 228, 1,)),
+                                MaterialStateProperty.all(const Color.fromRGBO(
+                              0,
+                              97,
+                              228,
+                              1,
+                            )),
                             minimumSize:
                                 MaterialStateProperty.all(const Size(140, 45)),
                             shape: MaterialStateProperty.all(
@@ -136,10 +146,14 @@ class _EmployeeListState extends State<EmployeeList>
                       i = e;
                     });
                   },
-                  
                   unselectedLabelColor: Colors.black,
                   indicator: BoxDecoration(
-                    color: const Color.fromRGBO(0, 97, 228, 1,),
+                    color: const Color.fromRGBO(
+                      0,
+                      97,
+                      228,
+                      1,
+                    ),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   indicatorColor: const Color.fromARGB(255, 255, 255, 255),
@@ -150,7 +164,7 @@ class _EmployeeListState extends State<EmployeeList>
                         children: [
                           Icon(
                             Icons.person,
-                           // color: Colors.white,
+                            // color: Colors.white,
                             size: 16,
                           ),
                           SizedBox(width: 5),
@@ -167,7 +181,6 @@ class _EmployeeListState extends State<EmployeeList>
                         children: [
                           Icon(
                             Icons.person_4_rounded,
-                          
                             size: 16,
                           ),
                           SizedBox(width: 5),
@@ -234,12 +247,12 @@ class _SecondEContainarState extends State<SecondEContainar> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only( top: 6),
+          padding: const EdgeInsets.only(top: 6),
           child: Card(
-             
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            elevation: 5,
+            shadowColor: Colors.orange[100],
             child: Container(
               height: 70,
               width: double.infinity,
@@ -254,37 +267,39 @@ class _SecondEContainarState extends State<SecondEContainar> {
                     Row(
                       children: [
                         const CircleAvatar(
-                          backgroundImage: AssetImage("assets/Ellipse 1 (2).png"),
-                           backgroundColor: Colors.white,
+                          backgroundImage:
+                              AssetImage("assets/Ellipse 1 (2).png"),
+                          backgroundColor: Colors.white,
                           radius: 25,
                         ),
-                        const SizedBox(width: 30,),
-                        Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 10),
-                        const Text(
-                          "S Usain Sheik",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),
-                        ),
                         const SizedBox(
-                          height: 5,
+                          width: 30,
                         ),
-                        RatingBarIndicator(
-                          itemBuilder: (context, index) => const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                          ),
-                          rating: 4.5,
-                          itemCount: 5,
-                          itemSize: 19,
-                        )
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const SizedBox(height: 10),
+                            const Text(
+                              "S Usain Sheik",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            RatingBarIndicator(
+                              itemBuilder: (context, index) => const Icon(
+                                Icons.star,
+                                color: Colors.amber,
+                              ),
+                              rating: 4.5,
+                              itemCount: 5,
+                              itemSize: 19,
+                            )
+                          ],
+                        ),
                       ],
                     ),
-                      ],
-                    ),
-                    
                     const Text(
                       "+91 9523452908",
                       style:
@@ -337,11 +352,11 @@ class FirstEContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only( top: 6),
+      padding: const EdgeInsets.only(top: 6),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
+        elevation: 5,
+        shadowColor: Colors.orange[100],
         child: Container(
           height: 70,
           width: double.infinity,
@@ -360,31 +375,32 @@ class FirstEContainer extends StatelessWidget {
                       backgroundColor: Colors.white,
                       radius: 25,
                     ),
-                    SizedBox(width: 30,),
-                    Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 10),
-                    Text(
-                      "S Usain Sheik",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
                     SizedBox(
-                      height: 5,
+                      width: 30,
                     ),
-                    Text(
-                      "F000000001",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue),
-                    )
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 10),
+                        Text(
+                          "S Usain Sheik",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "F000000001",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue),
+                        )
+                      ],
+                    ),
                   ],
                 ),
-                  ],
-                ),
-                
                 Text(
                   "+91 9523452908",
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
@@ -405,37 +421,44 @@ class FirstEContainer extends StatelessWidget {
     );
   }
 }
-class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
 
+class MyAppbar extends StatelessWidget implements PreferredSizeWidget {
   final dynamic scaffoldKey;
   const MyAppbar({super.key, required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          onPressed: () {
-            scaffoldKey.currentState!.openDrawer();
-          },
-          icon: const Icon(
-            Icons.menu,
-            color: Color.fromRGBO(0, 97, 228, 1,)
-          ),
+      backgroundColor: Colors.white,
+      leading: IconButton(
+        onPressed: () {
+          scaffoldKey.currentState!.openDrawer();
+        },
+        icon: const Icon(Icons.menu,
+            color: Color.fromRGBO(
+              0,
+              97,
+              228,
+              1,
+            )),
+      ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.notifications,
+              color: Color.fromRGBO(
+                0,
+                97,
+                228,
+                1,
+              )),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications,
-              color: Color.fromRGBO(0, 97, 228, 1,)
-            ),
-          ),
-        ],
-        title: Center(child: Image.asset("assets/logo.png")),
-        elevation: 5,
-      );
+      ],
+      title: Center(child: Image.asset("assets/logo.png")),
+      elevation: 5,
+    );
   }
+
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

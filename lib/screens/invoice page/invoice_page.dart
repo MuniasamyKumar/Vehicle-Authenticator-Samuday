@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/edit_invoice_page.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
+import 'package:sample_1/screens/invoice%20page/edit_invoice_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
 
 class InvoicePage extends StatefulWidget {
   const InvoicePage({super.key});
@@ -28,14 +28,14 @@ class _InvoicePageState extends State<InvoicePage> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                    
                     top: 30,
                   ),
                   child: Row(
                     children: [
                       const Text(
                         "Invoice",
-                        style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 19, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
                         width: 140,
@@ -55,24 +55,26 @@ class _InvoicePageState extends State<InvoicePage> {
                             ),
                             labelStyle: TextStyle(color: Colors.blueAccent),
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
                               borderSide: BorderSide.none,
                             ),
                           ),
                         ),
                       ),
-                   
                       const SizedBox(width: 25),
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             backgroundColor:
                                 const MaterialStatePropertyAll(Colors.white),
-                            minimumSize: const MaterialStatePropertyAll(Size(90, 45)),
+                            minimumSize:
+                                const MaterialStatePropertyAll(Size(90, 45)),
                             side: const MaterialStatePropertyAll(
                                 BorderSide(color: Color(0xFF0061E4), width: 1)),
-                            shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)))),
+                            shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)))),
                         child: const Text(
                           "Filter",
                           style: TextStyle(
@@ -93,8 +95,9 @@ class _InvoicePageState extends State<InvoicePage> {
                                 const MaterialStatePropertyAll(Size(110, 45)),
                             side: const MaterialStatePropertyAll(
                                 BorderSide(color: Color(0xFF0061E4), width: 1)),
-                            shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)))),
+                            shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)))),
                         child: const Text(
                           "Sort by",
                           style: TextStyle(
@@ -138,7 +141,7 @@ class InvoiceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         elevation: 5,
@@ -237,7 +240,6 @@ class InvoiceContainer extends StatelessWidget {
                     fontSize: 15,
                     color: Color(0xFF0C5CD7)),
               ),
-              
               ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/upload_img_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/upload_img_page.dart';
 
 import 'employee_list.dart';
-import 'homepage.dart';
+import '../dashboard page/homepage.dart';
 
 class CreateDriverPage extends StatefulWidget {
   const CreateDriverPage({super.key});

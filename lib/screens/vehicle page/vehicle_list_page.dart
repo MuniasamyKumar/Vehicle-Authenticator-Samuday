@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/create_vehicle_page.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
-import 'package:sample_1/vehicle_details.dart';
+import 'package:sample_1/screens/vehicle%20page/create_vehicle_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
+import 'package:sample_1/screens/vehicle%20page/vehicle_details.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -31,7 +31,8 @@ class _VehicleListPageState extends State<VehicleListPage> {
                   children: [
                     const Text(
                       "Vehicle List",
-                      style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       width: 140,
@@ -74,13 +75,15 @@ class _VehicleListPageState extends State<VehicleListPage> {
                           )),
                       child: const Text(
                         "+",
-                        style:
-                            TextStyle(fontSize: 28, fontWeight: FontWeight.normal),
+                        style: TextStyle(
+                            fontSize: 28, fontWeight: FontWeight.normal),
                       ),
                     )
                   ],
                 ),
-                const SizedBox(height: 70,),
+                const SizedBox(
+                  height: 70,
+                ),
                 Align(
                   alignment: Alignment.center,
                   child: SizedBox(
@@ -88,12 +91,10 @@ class _VehicleListPageState extends State<VehicleListPage> {
                     child: ListView.builder(
                       shrinkWrap: true,
                       scrollDirection: Axis.horizontal,
-                      
                       itemCount: 3,
                       itemBuilder: (BuildContext context, int index) {
-                        return  const CarCustomContainer();
+                        return const CarCustomContainer();
                       },
-                      
                     ),
                   ),
                 )
@@ -117,8 +118,7 @@ class CarCustomContainer extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Card(
         elevation: 5,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: SizedBox(
           height: 320,
           width: 380,
@@ -135,8 +135,8 @@ class CarCustomContainer extends StatelessWidget {
                       fit: BoxFit.cover,
                     )),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 35, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 35, vertical: 15),
                   child: Column(
                     children: [
                       const Row(
@@ -144,15 +144,13 @@ class CarCustomContainer extends StatelessWidget {
                           Text(
                             "TN 69 AB 5683",
                             style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500),
+                                fontSize: 17, fontWeight: FontWeight.w500),
                           ),
                           Spacer(),
                           Text(
                             "Maruti Suzuki",
                             style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400),
+                                fontSize: 15, fontWeight: FontWeight.w400),
                           )
                         ],
                       ),
@@ -164,8 +162,7 @@ class CarCustomContainer extends StatelessWidget {
                           child: Text(
                             "S Ragu",
                             style: TextStyle(
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500),
+                                fontSize: 19, fontWeight: FontWeight.w500),
                           )),
                       const SizedBox(
                         height: 20,
@@ -179,8 +176,7 @@ class CarCustomContainer extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               minimumSize: const Size(100, 37),
                               shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(12)),
+                                  borderRadius: BorderRadius.circular(12)),
                               backgroundColor: const Color.fromRGBO(
                                 0,
                                 97,
@@ -190,8 +186,7 @@ class CarCustomContainer extends StatelessWidget {
                           child: const Text(
                             "View Details",
                             style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.normal),
+                                fontSize: 16, fontWeight: FontWeight.normal),
                           ),
                         ),
                       )
