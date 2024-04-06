@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
 
 import 'upload_img_page.dart';
 
@@ -109,9 +109,7 @@ class _CreateEmployeePageState extends State<CreateEmployeePage> {
                           CustomTextForm(
                             title: "Upload Image",
                             star: "*",
-                            cameraicon:
-                            Icons.camera,
-                   
+                            cameraicon: Icons.camera,
                             formKey: _formKey,
                             validation: (value) {
                               if (value == null || value.isEmpty) {
@@ -312,9 +310,10 @@ class CustomTextForm extends StatelessWidget {
     this.validation,
     required this.title,
     this.star,
-    required GlobalKey<FormState> formKey, this.cameraicon,
+    required GlobalKey<FormState> formKey,
+    this.cameraicon,
   });
-  final IconData?cameraicon;
+  final IconData? cameraicon;
   final dynamic validation;
   final String title;
   final String? star;
@@ -345,15 +344,15 @@ class CustomTextForm extends StatelessWidget {
             decoration: InputDecoration(
               // hintText: "hintText",
               // labelText: "labelText",
-              suffixIcon: 
-              
-              Padding(
+              suffixIcon: Padding(
                 padding: const EdgeInsets.only(right: 10),
                 child: IconButton(
                     onPressed: () {
                       openFilePicker(context);
                     },
-                    icon: Icon(cameraicon, size: 27,
+                    icon: Icon(
+                      cameraicon,
+                      size: 27,
                       color: const Color(0xFF0061E4),
                     )),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class TripListPage extends StatefulWidget {
@@ -51,7 +51,8 @@ class _TripListPageState extends State<TripListPage>
                   children: [
                     const Text(
                       "Trips",
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
                     SizedBox(
@@ -82,11 +83,13 @@ class _TripListPageState extends State<TripListPage>
                       style: ButtonStyle(
                           backgroundColor:
                               const MaterialStatePropertyAll(Colors.white),
-                          minimumSize: const MaterialStatePropertyAll(Size(90, 45)),
+                          minimumSize:
+                              const MaterialStatePropertyAll(Size(90, 45)),
                           side: const MaterialStatePropertyAll(
                               BorderSide(color: Color(0xFF0061E4), width: 1)),
-                          shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)))),
+                          shape: MaterialStatePropertyAll(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)))),
                       child: const Text(
                         "Filter",
                         style: TextStyle(
@@ -107,8 +110,9 @@ class _TripListPageState extends State<TripListPage>
                               const MaterialStatePropertyAll(Size(110, 45)),
                           side: const MaterialStatePropertyAll(
                               BorderSide(color: Color(0xFF0061E4), width: 1)),
-                          shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)))),
+                          shape: MaterialStatePropertyAll(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)))),
                       child: const Text(
                         "Sort by",
                         style: TextStyle(
@@ -149,7 +153,7 @@ class _TripListPageState extends State<TripListPage>
                       "Today's Trip",
                       style: TextStyle(
                           fontSize: 16,
-                         // color: Colors.black,
+                          // color: Colors.black,
                           fontWeight: FontWeight.w500),
                     )),
                     Tab(
@@ -157,7 +161,7 @@ class _TripListPageState extends State<TripListPage>
                       "Trip History",
                       style: TextStyle(
                           fontSize: 16,
-                        //  color: Colors.black,
+                          //  color: Colors.black,
                           fontWeight: FontWeight.w500),
                     )),
                     Tab(
@@ -165,7 +169,7 @@ class _TripListPageState extends State<TripListPage>
                       "Upcoming Trip",
                       style: TextStyle(
                           fontSize: 16,
-                        //  color: Colors.black,
+                          //  color: Colors.black,
                           fontWeight: FontWeight.w500),
                     )),
                     Tab(
@@ -173,7 +177,7 @@ class _TripListPageState extends State<TripListPage>
                       "Service Trip",
                       style: TextStyle(
                           fontSize: 16,
-                        //  color: Colors.black,
+                          //  color: Colors.black,
                           fontWeight: FontWeight.w500),
                     )),
                     Tab(
@@ -181,7 +185,7 @@ class _TripListPageState extends State<TripListPage>
                       "Special Trip",
                       style: TextStyle(
                           fontSize: 16,
-                        //  color: Colors.black,
+                          //  color: Colors.black,
                           fontWeight: FontWeight.w500),
                     ))
                   ],
@@ -266,118 +270,177 @@ class SpecialTripContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
-        child: Container(
-          height: 70,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: const Color(0xFFE4E4E4),
-                width: 1,
-              )),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+        elevation: 5,
+        child: ExpansionTile(
+          trailing: const Padding(
+            padding: EdgeInsets.only(left: 40, right: 10, top: 10, bottom: 10),
+            child: Icon(
+              Icons.expand_more,
+              size: 30,
+            ),
+          ),
+          shape: const RoundedRectangleBorder(side: BorderSide.none),
+          iconColor: Colors.black,
+          textColor: Colors.black,
+          title: Padding(
+            padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+            child: Align(
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("S Usain Sheik",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "19-10-2023    10:11 AM",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 13,
-                        color: Colors.grey),
-                  )
-                ],
-              ),
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "From : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
-                      ),
+                      Text("S Usain Sheik",
+                          style: TextStyle(
+                              fontSize: 17, fontWeight: FontWeight.bold)),
                       SizedBox(
                         height: 10,
                       ),
                       Text(
-                        "3rd Mile, Thoothukudi.",
+                        "19-10-2023    10:11 AM",
                         style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 13,
                             color: Colors.grey),
-                      ),
+                      )
                     ],
                   ),
-                  SizedBox(
-                    height: 10,
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "From : ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 14),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "3rd Mile, Thoothukudi.",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13,
+                                color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "To : ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 14),
+                          ),
+                          Text(
+                            "New Bus Stand, Thoothukudi",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13,
+                                color: Colors.grey),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  const Text(
+                    "3 Members",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 13,
+                        color: Colors.grey),
                   ),
                   Row(
                     children: [
+                      CircleAvatar(
+                          backgroundColor: Colors.green[500],
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.done,
+                                  color: Colors.white, size: 20))),
+                      const SizedBox(width: 20),
+                      CircleAvatar(
+                          backgroundColor: Colors.red[600],
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.close,
+                                  color: Colors.white, size: 20))),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          children: [
+            const Divider(
+              color: Colors.grey,
+              thickness: 0.5,
+              endIndent: 30,
+              indent: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 45, top: 10, bottom: 20, right: 45),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Starting Km:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Starting Time:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Ending Km:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Text(
+                    "Ending Time:  ---",
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  ),
+                  const Row(
+                    children: [
                       Text(
-                        "To : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        "Purpose:  ",
+                        style: TextStyle(fontSize: 15, color: Colors.black),
                       ),
                       Text(
-                        "New Bus Stand, Thoothukudi",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 13,
-                            color: Colors.grey),
+                        "Ut enim ad minim veniam",
+                        style: TextStyle(fontSize: 15, color: Colors.grey),
                       ),
                     ],
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: const ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(
+                            Color.fromRGBO(0, 97, 228, 1)),
+                        elevation: MaterialStatePropertyAll(0),
+                        minimumSize: MaterialStatePropertyAll(Size(80, 35))),
+                    child: const Text(
+                      "View",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
                   )
                 ],
               ),
-              const Text(
-                "3 Members",
-                style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 13,
-                    color: Colors.grey),
-              ),
-              Row(
-                children: [
-                  CircleAvatar(
-                      backgroundColor: Colors.green[500],
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.done,
-                              color: Colors.white, size: 20))),
-                  const SizedBox(width: 20),
-                  CircleAvatar(
-                      backgroundColor: Colors.red[600],
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.close,
-                              color: Colors.white, size: 20))),
-                ],
-              ),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.keyboard_arrow_down_sharp,
-                    size: 25,
-                  ))
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
@@ -392,11 +455,11 @@ class ServiceTripContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
+        elevation: 5,
+        shadowColor: Colors.orange[100],
         child: Container(
           height: 70,
           width: double.infinity,
@@ -404,7 +467,7 @@ class ServiceTripContainer extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
-                  width: 1,
+                width: 1,
               )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -437,8 +500,8 @@ class ServiceTripContainer extends StatelessWidget {
                     children: [
                       Text(
                         "Type of service : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
                       Text(
                         "Oil change",
@@ -472,7 +535,8 @@ class ServiceTripContainer extends StatelessWidget {
                   children: [
                     const Text(
                       "Driver : ",
-                      style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
                     ),
                     const SizedBox(
                       height: 5,
@@ -533,11 +597,11 @@ class UpcomingTripContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
+        elevation: 5,
+        shadowColor: Colors.orange[100],
         child: Container(
           height: 70,
           width: double.infinity,
@@ -545,7 +609,7 @@ class UpcomingTripContainer extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
-                  width: 1,
+                width: 1,
               )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -577,8 +641,8 @@ class UpcomingTripContainer extends StatelessWidget {
                     children: [
                       Text(
                         "From : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
                       SizedBox(
                         height: 10,
@@ -599,8 +663,8 @@ class UpcomingTripContainer extends StatelessWidget {
                     children: [
                       Text(
                         "To : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
                       Text(
                         "New Bus Stand, Thoothukudi",
@@ -640,6 +704,7 @@ class UpcomingTripContainer extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
+                      elevation: const MaterialStatePropertyAll(0),
                       backgroundColor: const MaterialStatePropertyAll(
                           Color.fromARGB(255, 253, 194, 189)),
                       minimumSize: const MaterialStatePropertyAll(
@@ -666,135 +731,206 @@ class TripHistoryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
-        child: Container(
-          height: 70,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: const Color(0xFFE4E4E4),
-                  width: 1,
-              )),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+        elevation: 5,
+        child: ExpansionTile(
+          trailing: const Padding(
+            padding: EdgeInsets.only(left: 40, right: 10, top: 10, bottom: 10),
+            child: Icon(
+              Icons.expand_more,
+              size: 30,
+            ),
+          ),
+          shape: const RoundedRectangleBorder(side: BorderSide.none),
+          iconColor: Colors.black,
+          textColor: Colors.black,
+          title: Padding(
+            padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+            child: Align(
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("S Usain Sheik",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "19-10-2023    10:11 AM",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 13,
-                        color: Colors.grey),
-                  )
-                ],
-              ),
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "From : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
-                      ),
+                      Text("S Usain Sheik",
+                          style: TextStyle(
+                              fontSize: 17, fontWeight: FontWeight.bold)),
                       SizedBox(
                         height: 10,
                       ),
                       Text(
-                        "3rd Mile, Thoothukudi.",
+                        "19-10-2023    10:11 AM",
                         style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 13,
                             color: Colors.grey),
-                      ),
+                      )
                     ],
                   ),
-                  SizedBox(
-                    height: 10,
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "From : ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 14),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "3rd Mile, Thoothukudi.",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13,
+                                color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "To : ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 14),
+                          ),
+                          Text(
+                            "New Bus Stand, Thoothukudi",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w300,
+                                fontSize: 13,
+                                color: Colors.grey),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  const Text(
+                    "3 Members",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 13,
+                        color: Colors.grey),
                   ),
                   Row(
                     children: [
-                      Text(
-                        "To : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
-                      ),
-                      Text(
-                        "New Bus Stand, Thoothukudi",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 13,
-                            color: Colors.grey),
+                      const Text("4.5",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25)),
+                      const SizedBox(width: 15),
+                      RatingBarIndicator(
+                        itemBuilder: (context, index) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        rating: 4.5,
+                        itemCount: 5,
+                        itemSize: 19,
                       ),
                     ],
-                  )
+                  ),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          elevation: const MaterialStatePropertyAll(0),
+                          backgroundColor: const MaterialStatePropertyAll(
+                              Color.fromARGB(255, 191, 244, 193)),
+                          minimumSize: const MaterialStatePropertyAll(
+                            Size(100, 35),
+                          ),
+                          shape: MaterialStatePropertyAll(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                  side: BorderSide.none))),
+                      child: Text("Completed",
+                          style: TextStyle(color: Colors.green[600]))),
                 ],
               ),
-              const Text(
-                "3 Members",
-                style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 13,
-                    color: Colors.grey),
-              ),
-              Row(
+            ),
+          ),
+          children: const [
+            Divider(
+              color: Colors.grey,
+              thickness: 0.5,
+              endIndent: 30,
+              indent: 30,
+            ),
+            Padding(
+              padding:
+                  EdgeInsets.only(left: 45, top: 10, bottom: 20, right: 45),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text("4.5",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25)),
-                  const SizedBox(width: 15),
-                  RatingBarIndicator(
-                    itemBuilder: (context, index) => const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    rating: 4.5,
-                    itemCount: 5,
-                    itemSize: 19,
+                  CustomExpandRow(
+                    content: "Requested",
+                  ),
+                  CustomExpandRow(
+                    content: "Assigned",
+                  ),
+                  CustomExpandRow(
+                    content: "Accepted",
+                  ),
+                  CustomExpandRow(
+                    content: "Start Trip",
+                  ),
+                  CustomExpandRow(
+                    content: "Ongoing",
+                  ),
+                  CustomExpandRow(
+                    content: "End Trip",
                   ),
                 ],
               ),
-              ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: const MaterialStatePropertyAll(
-                          Color.fromARGB(255, 191, 244, 193)),
-                      minimumSize: const MaterialStatePropertyAll(
-                        Size(100, 35),
-                      ),
-                      shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                          side: BorderSide.none))),
-                  child: Text("Completed",
-                      style: TextStyle(color: Colors.green[600]))),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.keyboard_arrow_down_sharp,
-                    size: 28,
-                  ))
-            ],
-          ),
+            )
+
+            // SizedBox(height: 100, width: 30, child: Text("data")),
+          ],
         ),
       ),
+    );
+  }
+}
+
+class CustomExpandRow extends StatelessWidget {
+  const CustomExpandRow({
+    super.key,
+    required this.content,
+  });
+  final String content;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          content,
+          style: const TextStyle(fontSize: 15, color: Colors.black),
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+        const CircleAvatar(
+          radius: 18,
+          backgroundColor: Color(0xFF0043CE),
+          child: Icon(
+            Icons.done,
+            size: 25,
+            color: Colors.white,
+          ),
+        ),
+      ],
     );
   }
 }
@@ -807,11 +943,11 @@ class TodayTripContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric( vertical: 3),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-         elevation: 5,
-         shadowColor: Colors.orange[100],
+        elevation: 5,
+        shadowColor: Colors.orange[100],
         child: Container(
           height: 70,
           width: double.infinity,
@@ -819,7 +955,7 @@ class TodayTripContainer extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
-                  width: 1,
+                width: 1,
               )),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -851,8 +987,8 @@ class TodayTripContainer extends StatelessWidget {
                     children: [
                       Text(
                         "From : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
                       SizedBox(
                         height: 10,
@@ -873,8 +1009,8 @@ class TodayTripContainer extends StatelessWidget {
                     children: [
                       Text(
                         "To : ",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
                       Text(
                         "Anna Nagar,Vilathikulam",
@@ -914,6 +1050,7 @@ class TodayTripContainer extends StatelessWidget {
               ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
+                      elevation: const MaterialStatePropertyAll(0),
                       backgroundColor: const MaterialStatePropertyAll(
                           Color.fromARGB(255, 210, 184, 243)),
                       minimumSize: const MaterialStatePropertyAll(

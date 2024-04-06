@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
-import 'package:sample_1/profile_view_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
+import 'package:sample_1/screens/profile%20page/profile_view_page.dart';
 
 class ProfileEditPage extends StatefulWidget {
   const ProfileEditPage({super.key});
@@ -114,9 +114,7 @@ class _ProfileEditPageState extends State<ProfileEditPage> {
                           height: 60,
                           width: 420,
                           child: DropdownButtonFormField(
-                             
                               decoration: InputDecoration(
-                               
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: const BorderSide(

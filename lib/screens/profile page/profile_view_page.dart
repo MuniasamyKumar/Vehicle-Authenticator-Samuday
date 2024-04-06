@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sample_1/employee_list.dart';
-import 'package:sample_1/homepage.dart';
-import 'package:sample_1/profile_edit_page.dart';
+import 'package:sample_1/screens/employee%20list%20page/employee_list.dart';
+import 'package:sample_1/screens/dashboard%20page/homepage.dart';
+import 'package:sample_1/screens/profile%20page/profile_edit_page.dart';
 
 class ProfileViewPage extends StatefulWidget {
   const ProfileViewPage({super.key});
@@ -31,10 +31,14 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                     SizedBox(
                       height: 200,
                       width: double.infinity,
-                      child: Image.asset("assets/image 221.png",fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "assets/image 221.png",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 40, right: 40, top: 120),
+                      padding:
+                          const EdgeInsets.only(left: 40, right: 40, top: 120),
                       child: SizedBox(
                         height: 220,
                         width: double.infinity,
@@ -52,7 +56,8 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                                 Padding(
                                   padding: EdgeInsets.only(left: 30, top: 35),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
@@ -86,7 +91,8 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(10),
                                         side: const BorderSide(
-                                            color: Color(0xFF0061E4), width: 2))),
+                                            color: Color(0xFF0061E4),
+                                            width: 2))),
                                 child: const Row(children: [
                                   Icon(
                                     Icons.edit_square,
@@ -124,8 +130,8 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                             color: Color(0xFF0061E4), size: 35),
                         SizedBox(width: 30),
                         Text("ID2765847",
-                            style:
-                                TextStyle(fontSize: 23, color: Color(0xFf5E5E5E))),
+                            style: TextStyle(
+                                fontSize: 23, color: Color(0xFf5E5E5E))),
                       ],
                     ),
                     SizedBox(height: 30),
@@ -134,8 +140,8 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                         Icon(Icons.call, color: Color(0xFF0061E4), size: 35),
                         SizedBox(width: 25),
                         Text("+91 9876543210",
-                            style:
-                                TextStyle(fontSize: 23, color: Color(0xFf5E5E5E))),
+                            style: TextStyle(
+                                fontSize: 23, color: Color(0xFf5E5E5E))),
                       ],
                     ),
                     SizedBox(height: 30),
@@ -144,18 +150,19 @@ class _ProfileViewPageState extends State<ProfileViewPage> {
                         Icon(Icons.mail, color: Color(0xFF0061E4), size: 35),
                         SizedBox(width: 25),
                         Text("rajagopalan@samuday.com",
-                            style:
-                                TextStyle(fontSize: 23, color: Color(0xFf5E5E5E))),
+                            style: TextStyle(
+                                fontSize: 23, color: Color(0xFf5E5E5E))),
                       ],
                     ),
                     SizedBox(height: 30),
                     Row(
                       children: [
-                        Icon(Icons.home_filled, color: Color(0xFF0061E4), size: 35),
+                        Icon(Icons.home_filled,
+                            color: Color(0xFF0061E4), size: 35),
                         SizedBox(width: 25),
                         Text("Dr. Richardson, 3891 Ranchview, California 62639",
-                            style:
-                                TextStyle(fontSize: 23, color: Color(0xFf5E5E5E))),
+                            style: TextStyle(
+                                fontSize: 23, color: Color(0xFf5E5E5E))),
                       ],
                     ),
                   ],
