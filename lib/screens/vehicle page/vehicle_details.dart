@@ -572,14 +572,14 @@ class CustomTripHistroyContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         elevation: 5,
         shadowColor: Colors.orange[100],
         child: Container(
-          height: 70,
+          height: 78,
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
                 width: 1,
