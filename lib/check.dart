@@ -29,284 +29,141 @@ class _CheckPageState extends State<CheckPage> {
               iconColor: Colors.black,
               textColor: Colors.black,
               title: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(left: 20,top: 10, bottom: 10),
                 child: Align(
                   alignment: Alignment.center,
                   child: Row(
-                    //  crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("S.Ragu",
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    "19-10-2023    10:11 AM",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 13,
+                        color: Colors.grey),
+                  )
+                ],
+              ),
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: const DecorationImage(
-                                    image: AssetImage("assets/car01.png"),
-                                    fit: BoxFit.cover)),
-                          ),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 15),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "TN96 BS3545",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  "19-10-2023    10:11 AM",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
+                      Text(
+                        "From : ",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "From : ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                                Text(
-                                  "Office",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12,
-                                      color: Colors.grey),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "To : ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                                Text(
-                                  "Vilvamarathupatti",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12,
-                                      color: Colors.grey),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                      SizedBox(
+                        height: 10,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "User : ",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 14),
-                            ),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 32,
-                                  width: 32,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image:
-                                            AssetImage("assets/Ellipse 2.png"),
-                                        fit: BoxFit.cover,
-                                      )),
-                                ),
-                                const SizedBox(
-                                  width: 4,
-                                ),
-                                const Text(
-                                  "Guru prasad",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "Driver : ",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400, fontSize: 14),
-                            ),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 32,
-                                  width: 32,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image:
-                                            AssetImage("assets/Ellipse 3.png"),
-                                        fit: BoxFit.cover,
-                                      )),
-                                ),
-                                const SizedBox(
-                                  width: 4,
-                                ),
-                                const Text(
-                                  "saran Kumar c",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  "Total Km  : ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                                Text(
-                                  "-",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12,
-                                      color: Colors.grey),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "No.of Traveller : ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14),
-                                ),
-                                Text(
-                                  "3",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w300,
-                                      fontSize: 12,
-                                      color: Colors.grey),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                      Text(
+                        "Office",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                            color: Colors.grey),
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "To : ",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400, fontSize: 14),
+                      ),
+                      Text(
+                        "Anna Nagar,Vilathikulam",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+              const Text(
+                "2 Members",
+                style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 13,
+                    color: Colors.grey),
+              ),
+              Row(
+                children: [
+                  CircleAvatar(
+                      backgroundColor: Colors.green[900],
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.call_sharp,
+                              color: Colors.white, size: 20))),
+                  const SizedBox(width: 20),
+                  CircleAvatar(
+                      backgroundColor: const Color.fromARGB(255, 11, 2, 187),
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.map_outlined,
+                              color: Colors.white, size: 20))),
+                ],
+              ),
+              ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      elevation: const MaterialStatePropertyAll(0),
+                      backgroundColor: const MaterialStatePropertyAll(
+                          Color.fromARGB(255, 210, 184, 243)),
+                      minimumSize: const MaterialStatePropertyAll(
+                        Size(100, 35),
+                      ),
+                      shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          side: BorderSide.none))),
+                  child: const Text("Accept",
+                      style: TextStyle(color: Color(0xFF8E30FF)))),
+
+            ],
+          ),
                 ),
               ),
-              children: [
-                const Divider(
+              children: const [
+                Divider(
                   color: Colors.grey,
                   thickness: 0.5,
                   endIndent: 30,
                   indent: 30,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
+                  padding: EdgeInsets.only(
                       left: 45, top: 10, bottom: 20, right: 45),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        "Starting Km:  ---",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      const Text(
-                        "Starting Time:  ---",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      const Text(
-                        "Ending Km:  ---",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      const Text(
-                        "Ending Time:  ---",
-                        style: TextStyle(fontSize: 15, color: Colors.black),
-                      ),
-                      const Row(
-                        children: [
-                          Text(
-                            "Purpose:  ",
-                            style: TextStyle(fontSize: 15, color: Colors.black),
-                          ),
-                          Text(
-                            "Ut enim ad minim veniam",
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      ElevatedButton(
-                          onPressed: () {},
-                          style: ButtonStyle(
-                              elevation: const MaterialStatePropertyAll(0),
-                              backgroundColor: const MaterialStatePropertyAll(
-                                  Color(0xFFFDF3E6)),
-                              minimumSize: const MaterialStatePropertyAll(
-                                Size(100, 35),
-                              ),
-                              shape: MaterialStatePropertyAll(
-                                  RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5),
-                                      side: BorderSide.none))),
-                          child: const Text("Assigned",
-                              style: TextStyle(color: Color(0xFFE68A00)))),
+                     CustomExpandRow(
+                    content: "Requested",
+                  ),
+                  CustomExpandRow(
+                    content: "Assigned",
+                  ),
+                  CustomExpandRow(
+                    content: "Accepted",
+                  ),
+                   
                     ],
                   ),
                 )
@@ -318,6 +175,8 @@ class _CheckPageState extends State<CheckPage> {
     );
   }
 }
+
+
 
 class CustomExpandRow extends StatelessWidget {
   const CustomExpandRow({

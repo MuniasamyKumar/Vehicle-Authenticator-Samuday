@@ -457,14 +457,14 @@ class ServiceTripContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         elevation: 5,
-        shadowColor: Colors.orange[100],
+        
         child: Container(
-          height: 70,
+          height: 78,
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
                 width: 1,
@@ -599,14 +599,14 @@ class UpcomingTripContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         elevation: 5,
-        shadowColor: Colors.orange[100],
+        
         child: Container(
-          height: 70,
+          height: 78,
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               border: Border.all(
                 color: const Color(0xFFE4E4E4),
                 width: 1,
@@ -945,20 +945,25 @@ class TodayTripContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        elevation: 5,
-        shadowColor: Colors.orange[100],
-        child: Container(
-          height: 70,
-          width: double.infinity,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: const Color(0xFFE4E4E4),
-                width: 1,
-              )),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            elevation: 5,
+            child: ExpansionTile(
+              trailing: const Padding(
+                padding:
+                    EdgeInsets.only(left: 40, right: 10, top: 10, bottom: 10),
+                child: Icon(
+                  Icons.expand_more,
+                  size: 30,
+                ),
+              ),
+              shape: const RoundedRectangleBorder(side: BorderSide.none),
+              iconColor: Colors.black,
+              textColor: Colors.black,
+              title: Padding(
+                padding: const EdgeInsets.only(left: 20,top: 10, bottom: 10),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1061,16 +1066,81 @@ class TodayTripContainer extends StatelessWidget {
                           side: BorderSide.none))),
                   child: const Text("Accept",
                       style: TextStyle(color: Color(0xFF8E30FF)))),
-              IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.keyboard_arrow_down_sharp,
-                    size: 28,
-                  ))
+
             ],
           ),
-        ),
-      ),
+                ),
+              ),
+              children: const [
+                Divider(
+                  color: Colors.grey,
+                  thickness: 0.5,
+                  endIndent: 30,
+                  indent: 30,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: 45, top: 10, bottom: 20, right: 45),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                     CustomExpandRow(
+                    content: "Requested",
+                  ),
+                  CustomExpandRow(
+                    content: "Assigned",
+                  ),
+                  CustomExpandRow(
+                    content: "Accepted",
+                  ),
+                      CustomExpandRow2(
+                        content: "Start Trip",
+                        num: "04",
+                      ),
+                      CustomExpandRow2(
+                        content: "Ongoing",
+                        num: "05",
+                      ),
+                      CustomExpandRow2(
+                        content: "End Trip",
+                        num: "06",
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
     );
+  }
+}
+
+
+class CustomExpandRow2 extends StatelessWidget {
+  const CustomExpandRow2({
+    super.key, required this.content, required this.num,
+  });
+final String content;
+final String num;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+          children: [
+            Text(
+              content,
+              style: const TextStyle(fontSize: 15, color: Colors.black),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+             CircleAvatar(
+              radius: 18,
+              backgroundColor:const Color(0xFFD9D9D9),
+              child: Text(
+                num,style: const TextStyle(fontSize: 17,fontWeight: FontWeight.w400,color: Colors.black),
+              )
+            ),
+          ],
+        );
   }
 }

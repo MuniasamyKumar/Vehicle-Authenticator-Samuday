@@ -157,6 +157,7 @@ class _HomePageState extends State<HomePage> {
                       percentage: 0.7,
                       pibackcolor: Color.fromARGB(255, 225, 202, 134),
                     ),
+                    SizedBox(width: 60),
                     MyContainer(
                       connum: 9865543210,
                       ownname: "Arun",
@@ -168,6 +169,8 @@ class _HomePageState extends State<HomePage> {
                       percentage: 0.3,
                       pibackcolor: Color.fromARGB(255, 152, 211, 154),
                     ),
+                    SizedBox(width: 60),
+
                     MyContainer(
                       connum: 9876543211,
                       ownname: "Rajkumar",
@@ -179,6 +182,8 @@ class _HomePageState extends State<HomePage> {
                       percentage: 0.8,
                       pibackcolor: Color.fromARGB(255, 224, 171, 167),
                     ),
+                    SizedBox(width: 60),
+
                     MyContainer(
                       connum: 9876549210,
                       ownname: "Aravind",
@@ -199,14 +204,11 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 21),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: 10,
-                    itemBuilder: (context, index) => const DetailsContainer(),
-                  ),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 10,
+                  itemBuilder: (context, index) => const DetailsContainer(),
                 )
               ],
             ),
